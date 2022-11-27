@@ -1,13 +1,10 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'TWK Lausanne';
+  src: local('TWK Lausanne'), url(./fonts/TWKLausanne-200.ttf) format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'ABC Favorit Arabic';
+  src: local('ABC Favorit Arabic'), url(./fonts/ABCFavoritArabicVariable.ttf) format('truetype');
 }
+
