@@ -1,10 +1,11 @@
 @font-face {
-  font-family: 'TWK Lausanne';
-  src: local('TWK Lausanne'), url(./fonts/TWKLausanne-200.ttf) format('truetype');
+  font-family: "TWK Lausanne";
+  src: local("TWK Lausanne"),
+    url(./fonts/TWKLausanne-200.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: 'ABC Favorit Arabic';
-  src: local('ABC Favorit Arabic'), url(./fonts/ABCFavoritArabicVariable.ttf) format('truetype');
+  font-family: "ABC Favorit Arabic";
+  src: local("ABC Favorit Arabic"),
+    url(./fonts/ABCFavoritArabicVariable.ttf) format("truetype");
 }
-
