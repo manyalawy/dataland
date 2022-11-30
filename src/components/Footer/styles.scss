@@ -1,17 +1,16 @@
 footer {
   padding: 5%;
-  background: #bdc1be;
   position: absolute;
   bottom: 0;
-  width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: #bdc1be;
 }
 
 .column {
-  float: left;
   width: 33.33%;
-  display: flex;
-  flex-direction: column;
 }
 
 footer .logo {
@@ -22,13 +21,6 @@ footer .logo {
 footer .ig-logo {
   width: 5%;
   height: auto;
-}
-
-/* Clear floats after the columns */
-footer .row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 a .link-eng {
@@ -70,4 +62,10 @@ footer .description-ar {
 footer .ig-container {
   display: flex;
   flex-direction: row;
+}
+
+footer .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
