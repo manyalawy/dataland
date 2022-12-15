@@ -10,7 +10,7 @@ export default function Navbar() {
           onClick={() => {
             setSelectedPage("dataland");
           }}
-          className={selectedPage == "dataland" ? "bright" : "dark"}
+          className={selectedPage === "dataland" ? "bright" : "dark"}
         >
           <span className="item-en">DATALAND</span>
           {"   "}
@@ -20,7 +20,7 @@ export default function Navbar() {
           onClick={() => {
             setSelectedPage("about");
           }}
-          className={selectedPage == "about" ? "bright" : "dark"}
+          className={selectedPage === "about" ? "bright" : "dark"}
         >
           <span className="item-en">ABOUT</span>
           {"   "}
@@ -30,7 +30,7 @@ export default function Navbar() {
           onClick={() => {
             setSelectedPage("building_inventory");
           }}
-          className={selectedPage == "building_inventory" ? "bright" : "dark"}
+          className={selectedPage === "building_inventory" ? "bright" : "dark"}
         >
           <span className="item-en">BUILDING INVENTORY</span>
           {"   "}
@@ -40,7 +40,9 @@ export default function Navbar() {
           onClick={() => {
             setSelectedPage("precedents_inventory");
           }}
-          className={selectedPage == "precedents_inventory" ? "bright" : "dark"}
+          className={
+            selectedPage === "precedents_inventory" ? "bright" : "dark"
+          }
         >
           <span className="item-en">PRECEDENTS INVENTORY</span>
           {"   "}
@@ -50,7 +52,7 @@ export default function Navbar() {
           onClick={() => {
             setSelectedPage("merchandise");
           }}
-          className={selectedPage == "merchandise" ? "bright" : "dark"}
+          className={selectedPage === "merchandise" ? "bright" : "dark"}
         >
           <span className="item-en">MERCHANDISE</span>
           {"   "}
@@ -60,7 +62,7 @@ export default function Navbar() {
           onClick={() => {
             setSelectedPage("login");
           }}
-          className={selectedPage == "login" ? "bright" : "dark"}
+          className={selectedPage === "login" ? "bright" : "dark"}
         >
           <span className="item-en">LOGIN</span>
           {"   "}
