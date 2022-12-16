@@ -1,0 +1,257 @@
+.filter {
+  padding-left: 80px;
+  padding-right: 80px;
+  background: #bdc1be;
+  margin-top: 60px;
+  .heading {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .issue_container {
+    margin-bottom: 10px;
+  }
+
+  .issue_button_eng {
+    background-color: transparent;
+    font-family: TWK Lausanne;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    border: 0px;
+    cursor: pointer;
+  }
+
+  .issue_button_ar {
+    background-color: transparent;
+    font-family: ABC Favorit Arabic;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: right;
+    border: 0px;
+    cursor: pointer;
+  }
+
+  .bright {
+    color: white;
+  }
+
+  .heading-eng {
+    font-family: TWK Lausanne;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: black;
+  }
+
+  .subheading-eng {
+    font-family: TWK Lausanne;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #434343;
+    margin-top: 15px;
+    inline-size: 30rem;
+  }
+
+  .heading-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: black;
+  }
+
+  .subheading-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #434343;
+    margin-top: 15px;
+    inline-size: 30rem;
+  }
+
+  .filter-container {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  hr {
+    border: 0.5px solid #000000;
+  }
+
+  .filter-buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .filter-button {
+    font-family: TWK Lausanne;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 27px;
+    background-color: transparent;
+    border: 0px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .deselected {
+    color: #6a6a6a;
+  }
+
+  .sort-by-container {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .sort-by-label {
+    margin-bottom: 20px;
+  }
+
+  .sort-by-label-eng {
+    font-family: TWK Lausanne;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-right: 8px;
+  }
+
+  .sort-by-label-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #434343;
+  }
+
+  .check-box-label-eng {
+    font-family: TWK Lausanne;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.01836734637618065px;
+    text-align: left;
+    margin-right: 8px;
+  }
+
+  .check-box-label-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.019387755542993546px;
+    text-align: right;
+    color: #434343;
+  }
+
+  .check-box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .check-box {
+    margin-left: 0px;
+  }
+
+  .select-option-eng {
+    font-family: TWK Lausanne;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+
+  .select-option-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  .n-items-selected-eng {
+    font-family: TWK Lausanne;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-right: 6px;
+  }
+
+  .n-items-selected-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #434343;
+  }
+
+  .select-option-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .filter-by-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .filter-label-eng {
+    font-family: TWK Lausanne;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-right: 6px;
+  }
+
+  .filter-label-ar {
+    font-family: ABC Favorit Arabic;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  .filter-label {
+    margin-bottom: 5px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .chips-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .chip-label-eng {
+    font-family: TWK Lausanne;
+    margin-right: 5px;
+  }
+
+  .chip-label-ar {
+    font-family: ABC Favorit Arabic;
+  }
+}

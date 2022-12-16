@@ -10,20 +10,25 @@
     url(./fonts/ABCFavoritArabicVariable.ttf) format("truetype");
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.app-container {
+  background: #bdc1be;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-html {
-  /* this makes sure the padding and the border is included in the box sizing */
-  box-sizing: border-box;
-  overflow-y: hidden;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+
+// html {
+//   /* this makes sure the padding and the border is included in the box sizing */
+//   box-sizing: border-box;
+//   overflow-y: hidden;
+// }
 
 html body {
   padding: 0;
   margin: 0;
-  overflow-y: inherit;
 }
