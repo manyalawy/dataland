@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactSearchBox from "react-search-box";
 import "./styles.scss";
 import Heading from "./Heading";
 import FilterByButton from "./FilterByButton";
@@ -7,11 +6,15 @@ import SortByButton from "./SortByButton";
 import FilterBy from "./FilterBy";
 import SortBy from "./SortBy";
 import Searchbar from "./Searchbar";
-import { districts } from "../../data/districts";
+import FilterChip from "./FilterChip";
 
 export default function Filter() {
   const [buttonSelected, setButtonSelected] = useState(null);
   const [searchSelected, setSearchSelected] = useState(false);
+  const [sortBy, setSortBy] = useState(null);
+  const [districts, setDistricts] = useState([]);
+  const [dates, setDates] = useState([]);
+  const [architects, setArchitects] = useState([]);
 
   let handleFilterByClick = () => {
     if (buttonSelected === "filterBy") {
@@ -48,20 +51,68 @@ export default function Filter() {
             />
           </div>
         </div>
-        <div>
+        {/* <div>
           <Searchbar
             setSearchSelected={setSearchSelected}
             placeholder={"Search for a building"}
             options={districts}
           />
-        </div>
+        </div> */}
       </div>
       <hr />
       <div className={buttonSelected !== "filterBy" ? "hidden" : null}>
-        <FilterBy />
+        <FilterBy
+          districts={districts}
+          setDistricts={setDistricts}
+          dates={dates}
+          setDates={setDates}
+          architects={architects}
+          setArchitects={setArchitects}
+        />
       </div>
       <div className={buttonSelected !== "sortBy" ? "hidden" : null}>
-        <SortBy />
+        <SortBy sortBy={sortBy} setSortBy={setSortBy} />
+      </div>
+      <div className="chips-container">
+        {sortBy ? (
+          <FilterChip
+            chipTitle={"Sort by"}
+            label_eng={sortBy.label_eng}
+            label_ar={sortBy.label_ar}
+            setSortBy={setSortBy}
+            value={sortBy.value}
+          />
+        ) : null}
+        {districts.map((item) => (
+          <FilterChip
+            chipTitle={"Filter by"}
+            label_eng={item.label_eng}
+            label_ar={item.label_ar}
+            setFilterBy={setDistricts}
+            filterBy={districts}
+            value={item.value}
+          />
+        ))}
+        {dates.map((item) => (
+          <FilterChip
+            chipTitle={"Filter by"}
+            label_eng={item.label_eng}
+            label_ar={item.label_ar}
+            setFilterBy={setDates}
+            filterBy={dates}
+            value={item.value}
+          />
+        ))}
+        {architects.map((item) => (
+          <FilterChip
+            chipTitle={"Filter by"}
+            label_eng={item.label_eng}
+            label_ar={item.label_ar}
+            setFilterBy={setArchitects}
+            filterBy={architects}
+            value={item.value}
+          />
+        ))}
       </div>
     </div>
   );

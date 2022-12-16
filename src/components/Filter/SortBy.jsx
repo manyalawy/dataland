@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Checkbox } from "antd";
 
-export default function SortBy() {
-  const [sortBy, setsortBy] = useState(null);
-  let handleCheckBoxClick = (e) => {
+export default function SortBy({ sortBy, setSortBy }) {
+  let handleCheckBoxClick = (e, label_eng, label_ar) => {
     if (e.target.checked) {
-      setsortBy(e.target.value);
+      setSortBy({
+        label_eng: label_eng,
+        label_ar: label_ar,
+        value: e.target.value,
+      });
     } else {
-      setsortBy(null);
+      setSortBy(null);
     }
   };
   return (
@@ -22,9 +25,11 @@ export default function SortBy() {
         <div className="check-box-container">
           <Checkbox
             className="check-box"
-            checked={sortBy === "3d_model" ? true : false}
-            value={"3d_model"}
-            onClick={handleCheckBoxClick}
+            checked={sortBy?.value === "3d_model" ? true : false}
+            value="3d_model"
+            onClick={(e) => {
+              handleCheckBoxClick(e, "3D model", "نموذج ثلاثي الأبعاد");
+            }}
           >
             <p>
               <span className="check-box-label-eng">3D model</span>
@@ -32,10 +37,12 @@ export default function SortBy() {
             </p>
           </Checkbox>
           <Checkbox
-            checked={sortBy === "archival_source" ? true : false}
+            checked={sortBy?.value === "archival_source" ? true : false}
             value={"archival_source"}
             className="check-box"
-            onClick={handleCheckBoxClick}
+            onClick={(e) => {
+              handleCheckBoxClick(e, "Archival source", "مصادر أرشيفية");
+            }}
           >
             <p>
               <span className="check-box-label-eng">Archival source</span>
@@ -53,10 +60,14 @@ export default function SortBy() {
         </div>
         <div className="check-box-container">
           <Checkbox
-            checked={sortBy === "alphabetically" ? true : false}
+            checked={sortBy?.value === "alphabetically" ? true : false}
             className="check-box"
             value={"alphabetically"}
-            onClick={handleCheckBoxClick}
+            label_eng="Alphabetically"
+            label_ar="أبجديا"
+            onClick={(e) => {
+              handleCheckBoxClick(e, "Alphabetically", "أبجديا");
+            }}
           >
             <p>
               <span className="check-box-label-eng">Alphabetically</span>
@@ -64,10 +75,14 @@ export default function SortBy() {
             </p>
           </Checkbox>
           <Checkbox
-            checked={sortBy === "chronologically" ? true : false}
+            checked={sortBy?.value === "chronologically" ? true : false}
             className="check-box"
             value={"chronologically"}
-            onClick={handleCheckBoxClick}
+            label_eng="Chronologically"
+            label_ar="زمنيا"
+            onClick={(e) => {
+              handleCheckBoxClick(e, "Chronologically", "زمنيا");
+            }}
           >
             <p>
               <span className="check-box-label-eng">Chronologically</span>

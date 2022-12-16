@@ -12,22 +12,23 @@
 
 .app-container {
   background: #bdc1be;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
 
-html {
-  /* this makes sure the padding and the border is included in the box sizing */
-  box-sizing: border-box;
-  overflow-y: hidden;
-}
+// html {
+//   /* this makes sure the padding and the border is included in the box sizing */
+//   box-sizing: border-box;
+//   overflow-y: hidden;
+// }
 
 html body {
   padding: 0;
   margin: 0;
-  overflow-y: inherit;
 }

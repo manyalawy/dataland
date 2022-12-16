@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import Select, { components } from "react-select";
 
-export default function Dropdown({ placeholder, options }) {
-  const [selected, setSelected] = useState([]);
+export default function Dropdown({
+  filterBy,
+  setFilterBy,
+  placeholder,
+  options,
+}) {
   const handleTypeSelect = (e) => {
-    setSelected(e);
+    setFilterBy(e);
   };
 
   const colorStyles = {
@@ -78,6 +82,7 @@ export default function Dropdown({ placeholder, options }) {
         components={{ ValueContainer }}
         formatOptionLabel={formatOptionLabel}
         isSearchable={false}
+        value={filterBy}
       />
     </div>
   );
