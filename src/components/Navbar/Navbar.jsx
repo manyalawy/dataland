@@ -1,74 +1,116 @@
 import React, { useState } from "react";
-import "./styles.scss";
+import styled from "styled-components";
+
+const NavbarContainer = styled.div`
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #bdc1be;
+`;
+
+const NavBarItemEn = styled.span`
+  font-family: TWK Lausanne;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+`;
+
+const NavBarItemAr = styled.span`
+  font-family: ABC Favorit Arabic;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: right;
+`;
+
+const Button = styled.button`
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+`;
 
 export default function Navbar() {
   const [selectedPage, setSelectedPage] = useState("dataland");
   return (
-    <div className="navbar">
-      <div className="container">
-        <button
-          onClick={() => {
-            setSelectedPage("dataland");
-          }}
-          className={selectedPage === "dataland" ? "bright" : "dark"}
-        >
-          <span className="item-en">DATALAND</span>
-          {"   "}
-          <span className="item-ar">داتالاند</span>
-        </button>
-        <button
-          onClick={() => {
-            setSelectedPage("about");
-          }}
-          className={selectedPage === "about" ? "bright" : "dark"}
-        >
-          <span className="item-en">ABOUT</span>
-          {"   "}
-          <span className="item-ar">عن المشروع</span>
-        </button>
-        <button
-          onClick={() => {
-            setSelectedPage("building_inventory");
-          }}
-          className={selectedPage === "building_inventory" ? "bright" : "dark"}
-        >
-          <span className="item-en">BUILDING INVENTORY</span>
-          {"   "}
-          <span className="item-ar">قائمة المباني</span>
-        </button>
-        <button
-          onClick={() => {
-            setSelectedPage("precedents_inventory");
-          }}
-          className={
-            selectedPage === "precedents_inventory" ? "bright" : "dark"
-          }
-        >
-          <span className="item-en">PRECEDENTS INVENTORY</span>
-          {"   "}
-          <span className="item-ar">قائمة المجلات</span>
-        </button>
-        <button
-          onClick={() => {
-            setSelectedPage("merchandise");
-          }}
-          className={selectedPage === "merchandise" ? "bright" : "dark"}
-        >
-          <span className="item-en">MERCHANDISE</span>
-          {"   "}
-          <span className="item-ar">داتالاند</span>
-        </button>
-        <button
-          onClick={() => {
-            setSelectedPage("login");
-          }}
-          className={selectedPage === "login" ? "bright" : "dark"}
-        >
-          <span className="item-en">LOGIN</span>
-          {"   "}
-          <span className="item-ar">تسجيل الدخول</span>
-        </button>
-      </div>
-    </div>
+    <NavbarContainer>
+      <Button
+        onClick={() => {
+          setSelectedPage("dataland");
+        }}
+        style={{
+          color: selectedPage === "dataland" ? "white" : "black",
+        }}
+      >
+        <NavBarItemEn>DATALAND</NavBarItemEn>
+        {"   "}
+        <NavBarItemAr>داتالاند</NavBarItemAr>
+      </Button>
+      <Button
+        onClick={() => {
+          setSelectedPage("about");
+        }}
+        style={{
+          color: selectedPage === "about" ? "white" : "black",
+        }}
+      >
+        <NavBarItemEn>ABOUT</NavBarItemEn>
+        {"   "}
+        <NavBarItemAr>عن المشروع</NavBarItemAr>
+      </Button>
+      <Button
+        onClick={() => {
+          setSelectedPage("building_inventory");
+        }}
+        style={{
+          color: selectedPage === "building_inventory" ? "white" : "black",
+        }}
+      >
+        <NavBarItemEn>BUILDING INVENTORY</NavBarItemEn>
+        {"   "}
+        <NavBarItemAr>قائمة المباني</NavBarItemAr>
+      </Button>
+      <Button
+        onClick={() => {
+          setSelectedPage("precedents_inventory");
+        }}
+        style={{
+          color: selectedPage === "precedents_inventory" ? "white" : "black",
+        }}
+      >
+        <NavBarItemEn>PRECEDENTS INVENTORY</NavBarItemEn>
+        {"   "}
+        <NavBarItemAr>قائمة المجلات</NavBarItemAr>
+      </Button>
+      <Button
+        onClick={() => {
+          setSelectedPage("merchandise");
+        }}
+        style={{
+          color: selectedPage === "merchandise" ? "white" : "black",
+        }}
+      >
+        <NavBarItemEn>MERCHANDISE</NavBarItemEn>
+        {"   "}
+        <NavBarItemAr>داتالاند</NavBarItemAr>
+      </Button>
+      <Button
+        onClick={() => {
+          setSelectedPage("login");
+        }}
+        style={{
+          color: selectedPage === "login" ? "white" : "black",
+        }}
+      >
+        <NavBarItemEn>LOGIN</NavBarItemEn>
+        {"   "}
+        <NavBarItemAr>تسجيل الدخول</NavBarItemAr>
+      </Button>
+    </NavbarContainer>
   );
 }

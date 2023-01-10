@@ -1,11 +1,20 @@
 .filter {
   padding-left: 80px;
   padding-right: 80px;
+  @media screen and (max-width: 480px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   background: #bdc1be;
   margin-top: 60px;
   .heading {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   .issue_container {
@@ -17,7 +26,6 @@
     font-family: TWK Lausanne;
     font-size: 18px;
     font-weight: 300;
-    line-height: 20px;
     text-align: left;
     border: 0px;
     cursor: pointer;
@@ -26,9 +34,8 @@
   .issue_button_ar {
     background-color: transparent;
     font-family: ABC Favorit Arabic;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 27px;
     letter-spacing: 0px;
     text-align: right;
     border: 0px;
@@ -42,9 +49,6 @@
   .heading-eng {
     font-family: TWK Lausanne;
     font-size: 36px;
-    font-weight: 300;
-    line-height: 40px;
-    letter-spacing: 0.5px;
     text-align: left;
     color: black;
   }
@@ -52,35 +56,24 @@
   .subheading-eng {
     font-family: TWK Lausanne;
     font-size: 16px;
-    font-weight: 300;
-    line-height: 25px;
-    letter-spacing: 0px;
     text-align: left;
     color: #434343;
     margin-top: 15px;
-    inline-size: 30rem;
   }
 
   .heading-ar {
     font-family: ABC Favorit Arabic;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 51px;
-    letter-spacing: 0px;
+    font-size: 36px;
     text-align: right;
     color: black;
   }
 
   .subheading-ar {
     font-family: ABC Favorit Arabic;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0px;
+    font-size: 16px;
     text-align: right;
     color: #434343;
     margin-top: 15px;
-    inline-size: 30rem;
   }
 
   .filter-container {
@@ -116,6 +109,10 @@
   .sort-by-container {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     gap: 80px;
   }
 
@@ -210,6 +207,10 @@
   .filter-by-container {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     gap: 40px;
     margin-top: 20px;
   }
